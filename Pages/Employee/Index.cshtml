@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "員工資料維護";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h5>@Model.Message</h5>
+<hr />
+    
+<div class="container-fluid">
+  <!-- Content here -->
+
+
+    
+    <div class="row">
+        <div class="col-sm">
+            <div class="alert alert-warning" role="alert">
+                共有 @Model.Employees.Count 筆員工資料 <a asp-page="/Employee/Add" class="btn btn-primary">新增</a>
+            </div>
+        </div>
+    </div>
+
+    
+    @foreach (Employee employee in Model.Employees)
+    {
+    <div class="row">
+        <div class="col-sm">
+            <div class="alert alert-info" role="alert">
+                <div class="card">
+                    <h4 class="card-header">
+                        @employee.Name
+                    </h4>
+                    <div class="card-body">
+                        <h4 class="card-title">身分證號</h4>
+                        <p class="card-text">
+                            @employee.PersonId
+                        </p>
+                        <h4 class="card-title">其他屬性</h4>
+                        <p class="card-text">
+                            密碼：@employee.Password <br /> 
+                            Id：@employee.Id
+                        </p>
+                        <a href="#" class="btn btn-primary">修改</a>
+                        <a href="#" class="btn btn-primary">刪除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+
+    
+</div>
