@@ -24,11 +24,24 @@ namespace HowzWebRazor004.Pages.Employee
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
             // 查詢現有貝工
+            /*
             Query query = new Query("Employee")
             {
                 Filter = Filter.Equal("key", GoogleCloudDatastore.ToKey(Id, "Employee"))
             };
             var allEmployee = db.RunQueryLazily(query);
+            */
+
+            Entity employeeEntity = db.Lookup(GoogleCloudDatastore.ToKey(Id, "Employee"));
+            if ( employeeEntity != null )
+            {
+                employeeExisted = true;
+            }
+            else
+            {
+                employeeExisted = false;
+            }
+
             if (allEmployee.ToList().Count() > 0) employeeExisted = true;
             else employeeExisted = false;
 
