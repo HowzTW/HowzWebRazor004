@@ -1,0 +1,62 @@
+﻿@page "{id:long}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "員工資料維護 (刪除)";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h5>@Model.Message</h5>
+<hr />
+
+<div class="container-fluid">
+
+
+
+@if(Model.employeeExisted)
+{
+    
+    <div class="row">
+        <div class="col-sm">
+            <h5>
+            請確認是否刪除以下員工資料：
+            </h5>
+        </div>
+        <div class="col-sm">
+            <form method="POST">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="alert alert-info" role="alert">
+                    <label>姓名：某某某 (@Model.Id)</label>
+                    <input type="hidden" asp-for="Id" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="alert alert-info" role="alert">
+                    <label>身分證號：A123456789</label>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="alert alert-info" role="alert">
+                    <label>密碼：XXXXXXXXX</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                    <input class="btn btn-primary" type="submit" value="刪除">
+                    <a asp-page="/Employee/Index" class="btn btn-danger">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-sm">
+            <div class="alert alert-info" role="alert">
+            該員工資料不存在！
+            </div>
+            <a asp-page="/Employee/Index" class="btn btn-danger">取消</a>
+        </div>
+    </div>
+}
+</div>
+    

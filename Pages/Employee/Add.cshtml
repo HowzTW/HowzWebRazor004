@@ -14,16 +14,23 @@
         <div class="col-sm">
 			<form method="POST">
 				<div class="col-sm-4 col-xs-12">
-					<label asp-for="employee.Name">姓名: </label>
+					<div class="alert alert-info" role="alert">
+					<label asp-for="employee.Name">姓名：</label>
 					<input name="Name" type="text" placeholder="姓名" asp-for="employee.Name">
+                    </div>
+					
                 </div>
                 <div class="col-sm-4 col-xs-12">
-                    <label asp-for="employee.PersonId">身分證號: </label>
+                    <div class="alert alert-info" role="alert">
+					<label asp-for="employee.PersonId">身分證號：</label>
                     <input name="PersonId" type="text" placeholder="身分證號" asp-for="employee.PersonId">
+					</div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
-                    <label asp-for="employee.Password">密碼: </label>
+					<div class="alert alert-info" role="alert">
+                    <label asp-for="employee.Password">密碼：</label>
                     <input name="Password" type="text" placeholder="密碼" asp-for="employee.Password">
+					</div>
                 </div>
 				<div class="col-sm-12 col-xs-12">
                     <input class="btn btn-primary" type="submit" value="新增">
