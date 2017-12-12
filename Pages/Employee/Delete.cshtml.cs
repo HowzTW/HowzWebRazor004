@@ -26,7 +26,7 @@ namespace HowzWebRazor004.Pages.Employee
             // 查詢現有貝工
             Query query = new Query("Employee")
             {
-                Filter = Filter.Equal("id", Id)
+                Filter = Filter.Equal("Name", "陳小寶")
             };
             var allEmployee = db.RunQueryLazily(query);
             if (allEmployee.ToList().Count() > 0) employeeExisted = true;
