@@ -13,5 +13,11 @@ namespace HowzWebRazor004.Pages
             DatastoreDb db = DatastoreDb.Create(gcpProjectId);
             return db;
         }
+
+        public static Key ToKey(long id, string kind) =>
+            new Key().WithElement(kind, id);
+
+        public static long ToId(Key key) => key.Path[0].Id;
+
     }
 }
