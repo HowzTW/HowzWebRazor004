@@ -25,18 +25,18 @@
             <form method="POST">
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
-                    <label>姓名：某某某 (@Model.Id)</label>
+                    <label>姓名：@Model.employee.Name (@Model.Id)</label>
                     <input type="hidden" asp-for="Id" />
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
-                    <label>身分證號：A123456789</label>
+                    <label>身分證號：@Model.employee.PersonId</label>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
-                    <label>密碼：XXXXXXXXX</label>
+                    <label>密碼：@Model.employee.Password</label>
                     </div>
                 </div>
                 <div class="col-sm-12 col-xs-12">

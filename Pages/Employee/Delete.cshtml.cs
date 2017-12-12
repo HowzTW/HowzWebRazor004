@@ -13,6 +13,7 @@ namespace HowzWebRazor004.Pages.Employee
         public long Id { get; set; }
         public string Message { get; set; }
         public bool employeeExisted { get; set; }
+        public Employee employee { get; set; }
 
         public IActionResult OnGet(long id)
         {
@@ -36,6 +37,7 @@ namespace HowzWebRazor004.Pages.Employee
             if ( employeeEntity != null )
             {
                 employeeExisted = true;
+                employee = new Employee(employeeEntity);
             }
             else
             {
@@ -45,24 +47,17 @@ namespace HowzWebRazor004.Pages.Employee
 
             return Page();
         }
-        /*
+
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid) return Page();
 
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
-            var newEmployee = new Entity
-            {
-                Key = db.CreateKeyFactory("Employee").CreateIncompleteKey(),
-                ["Name"] = employee.Name,
-                ["Password"] = employee.Password,
-                ["PersonId"] = employee.PersonId
-            };
-            var employeeKeys = db.Insert(new[] { newEmployee });
+            db.Delete(GoogleCloudDatastore.ToKey(Id, "Employee"));
 
             return RedirectToPage("/Employee/Index");
         }
-        */
+
     }
 }
