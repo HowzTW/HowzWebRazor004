@@ -42,8 +42,6 @@ namespace HowzWebRazor004.Pages.Employee
                 employeeExisted = false;
             }
 
-            if (allEmployee.ToList().Count() > 0) employeeExisted = true;
-            else employeeExisted = false;
 
             return Page();
         }
