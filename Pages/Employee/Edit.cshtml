@@ -20,7 +20,7 @@
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
                     <label asp-for="employee.Name">姓名：</label>
-                    <input name="Name" type="text" placeholder="姓名" asp-for="employee.Name" value="@employee.Name">
+                    <input name="Name" type="text" placeholder="姓名" asp-for="employee.Name" value="@Model.employee.Name">
 					<input type="hidden" asp-for="Id" />
 					@Id
                     </div>
@@ -29,13 +29,13 @@
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
                     <label asp-for="employee.PersonId">身分證號：</label>
-                    <input name="PersonId" type="text" placeholder="身分證號" asp-for="employee.PersonId" value="@employee.PersonId">
+                    <input name="PersonId" type="text" placeholder="身分證號" asp-for="employee.PersonId" value="@Model.employee.PersonId">
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <div class="alert alert-info" role="alert">
                     <label asp-for="employee.Password">密碼：</label>
-                    <input name="Password" type="text" placeholder="密碼" asp-for="employee.Password" value="@employee.Password">
+                    <input name="Password" type="text" placeholder="密碼" asp-for="employee.Password" value="@Model.employee.Password">
                     </div>
                 </div>
                 <div class="col-sm-12 col-xs-12">
