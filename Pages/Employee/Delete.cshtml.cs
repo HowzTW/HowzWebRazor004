@@ -50,12 +50,13 @@ namespace HowzWebRazor004.Pages.Employee
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid) return Page();
+            Console.WriteLine("Delet Id when onPost is [{0}]. ", Id);
+
+            if (!ModelState.IsValid) return RedirectToPage("/Employee/Index");
 
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
-            db.Delete(GoogleCloudDatastore.ToKey(5724160613416960, "Employee"));
-
+            db.Delete(GoogleCloudDatastore.ToKey(Id, "Employee"));
             return RedirectToPage("/Employee/Index");
         }
 
