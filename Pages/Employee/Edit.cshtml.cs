@@ -17,6 +17,7 @@ namespace HowzWebRazor004.Pages.Employee
 
         public bool employeeExisted { get; set; }
 
+        [BindProperty]
         public Employee employee { get; set; }
 
         public IActionResult OnGet(long id)
