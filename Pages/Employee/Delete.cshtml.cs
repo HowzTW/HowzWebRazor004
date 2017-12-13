@@ -54,7 +54,7 @@ namespace HowzWebRazor004.Pages.Employee
 
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
-            db.Delete(GoogleCloudDatastore.ToKey(Id, "Employee"));
+            db.Delete(GoogleCloudDatastore.ToKey(5724160613416960, "Employee"));
 
             return RedirectToPage("/Employee/Index");
         }
