@@ -22,5 +22,8 @@
     <Compile Update="Pages\Employee\Delete.cshtml.cs">
       <DependentUpon>Delete.cshtml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Employee\Edit.cshtml.cs">
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -3,7 +3,6 @@
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/bin/Debug/netcoreapp2.0/HowzWebRazor004.runtimeconfig.dev.json
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/bin/Debug/netcoreapp2.0/HowzWebRazor004.dll
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/bin/Debug/netcoreapp2.0/HowzWebRazor004.pdb
-/Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.csprojResolveAssemblyReference.cache
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.csproj.CoreCompileInputs.cache
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.AssemblyInfoInputs.cache
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.AssemblyInfo.cs

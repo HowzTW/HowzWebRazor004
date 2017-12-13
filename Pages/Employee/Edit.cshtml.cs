@@ -8,7 +8,7 @@ using Google.Cloud.Datastore.V1;
 
 namespace HowzWebRazor004.Pages.Employee
 {
-    public class DeleteModel : PageModel
+    public class EditModel : PageModel
     {
         [BindProperty]
         public long Id { get; set; }
@@ -21,16 +21,14 @@ namespace HowzWebRazor004.Pages.Employee
 
         public IActionResult OnGet(long id)
         {
-            if (!ModelState.IsValid) return RedirectToPage("/Employee/Index");
-
-            Message = "刪除一筆員工資料";
+            Message = "修改一筆員工資料";
             Id = id;
 
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
 
             Entity employeeEntity = db.Lookup(GoogleCloudDatastore.ToKey(Id, "Employee"));
-            if ( employeeEntity != null )
+            if (employeeEntity != null)
             {
                 employeeExisted = true;
                 employee = new Employee(employeeEntity);
@@ -43,18 +41,5 @@ namespace HowzWebRazor004.Pages.Employee
 
             return Page();
         }
-
-        public IActionResult OnPost()
-        {
-            Console.WriteLine("Delet Id when onPost is [{0}]. ", Id);
-
-            if (!ModelState.IsValid) return RedirectToPage("/Employee/Index");
-
-            DatastoreDb db = GoogleCloudDatastore.CreateDb();
-
-            db.Delete(GoogleCloudDatastore.ToKey(Id, "Employee"));
-            return RedirectToPage("/Employee/Index");
-        }
-
     }
 }
