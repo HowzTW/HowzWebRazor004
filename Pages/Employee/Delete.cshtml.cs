@@ -10,9 +10,13 @@ namespace HowzWebRazor004.Pages.Employee
 {
     public class DeleteModel : PageModel
     {
+        [BindProperty]
         public long Id { get; set; }
+
         public string Message { get; set; }
+
         public bool employeeExisted { get; set; }
+
         public Employee employee { get; set; }
 
         public IActionResult OnGet(long id)
