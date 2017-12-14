@@ -42,5 +42,19 @@ namespace HowzWebRazor004.Pages.Employee
 
             return Page();
         }
+
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid) return Page();
+
+            DatastoreDb db = GoogleCloudDatastore.CreateDb();
+            Entity employeeEntity = db.Lookup(GoogleCloudDatastore.ToKey(Id, "Employee"));
+            employeeEntity["Name"] = employee.Name;
+            employeeEntity["PersonId"] = employee.PersonId;
+            employeeEntity["Password"] = employee.Password;
+            db.Update(employeeEntity);
+
+            return RedirectToPage("/Employee/Index");
+        }
     }
 }
