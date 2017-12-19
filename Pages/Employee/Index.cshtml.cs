@@ -19,7 +19,10 @@ namespace HowzWebRazor004.Pages.Employee
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
             // 查詢現有貝工
-            Query query = new Query("Employee");
+            Query query = new Query("Employee")
+            {
+                Order = { { "Name", PropertyOrder.Types.Direction.Descending } }
+            };
             var allEmployee = db.RunQueryLazily(query);
             int count = allEmployee.Count();
             Employees = new List<Employee>();
