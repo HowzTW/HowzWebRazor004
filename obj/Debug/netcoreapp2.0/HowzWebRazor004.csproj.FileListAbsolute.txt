@@ -8,3 +8,4 @@
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.AssemblyInfo.cs
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.dll
 /Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.pdb
+/Users/Howz/Projects/HowzWebRazor004/HowzWebRazor004/obj/Debug/netcoreapp2.0/HowzWebRazor004.csprojResolveAssemblyReference.cache
